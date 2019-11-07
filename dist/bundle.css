@@ -336,6 +336,16 @@ template {
 [hidden] {
   display: none;
 }
+@font-face {
+  font-family: "Turret Road";
+  src: url(fonts/64565c3bd0f859886fb5c9c7f0306449.ttf);
+  src: url(fonts/053592481e889e3609bac8796b209af2.ttf);
+}
+@font-face {
+  font-family: "Titillium Web";
+  src: url(fonts/ed1d014bf2b8b72f27d6af65c69f710a.ttf);
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -351,15 +361,6 @@ body {
 }
 body, body * {
   transform-style: preserve-3d;
-}
-@font-face {
-  font-family: "Turret Road";
-  src: url(fonts/64565c3bd0f859886fb5c9c7f0306449.ttf);
-  src: url(fonts/053592481e889e3609bac8796b209af2.ttf);
-}
-@font-face {
-  font-family: "Titillium Web";
-  src: url(fonts/ed1d014bf2b8b72f27d6af65c69f710a.ttf);
 }
 /*General settings*/
 ::-webkit-scrollbar {

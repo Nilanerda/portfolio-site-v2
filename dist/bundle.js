@@ -116,7 +116,7 @@ eval("\n\n//# sourceURL=webpack:///./src/javascript/app.js?");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/parallax.scss */ \"./src/sass/parallax.scss\");\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_parallax_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/fonts.scss */ \"./src/sass/fonts.scss\");\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_fonts_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app */ \"./src/javascript/app.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/fonts.scss */ \"./src/sass/fonts.scss\");\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/px-to-rem.scss */ \"./src/sass/px-to-rem.scss\");\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sass/parallax.scss */ \"./src/sass/parallax.scss\");\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app */ \"./src/javascript/app.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
 /***/ }),
 
@@ -139,6 +139,17 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/parallax.scss?");
+
+/***/ }),
+
+/***/ "./src/sass/px-to-rem.scss":
+/*!*********************************!*\
+  !*** ./src/sass/px-to-rem.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/px-to-rem.scss?");
 
 /***/ }),
 
