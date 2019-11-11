@@ -97,14 +97,14 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./node
 
 /***/ }),
 
-/***/ "./src/javascript/app.js":
-/*!*******************************!*\
-  !*** ./src/javascript/app.js ***!
-  \*******************************/
+/***/ "./src/javascript/app/app.js":
+/*!***********************************!*\
+  !*** ./src/javascript/app/app.js ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/javascript/app.js?");
+eval("window.onscroll = function() {\n    hideWelcomePage();\n    animateNavTabs();\n};\n\nfunction hideWelcomePage() {\n    let welcomePage = document.getElementById('welcomePage');\n    let header = document.getElementById('header');\n    let rect = header.getBoundingClientRect();\n    if (rect.top === 0) {\n        welcomePage.style.display = 'none';\n    }\n}\n\nfunction animateNavTabs() {\n    const TOP_CONTENT_INDENT = 40;\n    let sections = document.getElementsByClassName('main-content');\n    let headerHeight = document.getElementById('header').getBoundingClientRect().height;\n    for (let section of sections) {\n        let rect = section.getBoundingClientRect();\n        let id = section.id;\n        if (rect.top <= headerHeight + TOP_CONTENT_INDENT  &&  rect.top + rect.height > headerHeight + TOP_CONTENT_INDENT) {\n            document.querySelector('a[href*=' + id + ']').setAttribute('class', 'active');\n        } else {\n            document.querySelector('a[href*=' + id + ']').setAttribute('class', '');\n        }\n    }\n}\nfunction scrollOnClick(elementId) {\n    let sectionTop = document.getElementById(elementId).offsetTop;\n    let headerHeight = document.getElementById('header').getBoundingClientRect().height;\n    window.scrollTo({top: sectionTop - headerHeight, behavior: \"smooth\"})\n}\n\nlet navLinks = document.querySelectorAll('a[href*=\"#nav\"]');\nfor (let navlink of navLinks) {\n    navlink.addEventListener('click', function (e) {\n        e.preventDefault();\n        scrollOnClick(navlink.hash.substr(1));\n    })\n}\n\n//# sourceURL=webpack:///./src/javascript/app/app.js?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\n\n//# sourceURL=webpack:///./src/javascript/app.js?");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/fonts.scss */ \"./src/sass/fonts.scss\");\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/px-to-rem.scss */ \"./src/sass/px-to-rem.scss\");\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sass/parallax.scss */ \"./src/sass/parallax.scss\");\n/* harmony import */ var _sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_parallax_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app */ \"./src/javascript/app.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! normalize.css */ \"./node_modules/normalize.css/normalize.css\");\n/* harmony import */ var normalize_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(normalize_css__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../sass/fonts.scss */ \"./src/sass/fonts.scss\");\n/* harmony import */ var _sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_sass_fonts_scss__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../sass/px-to-rem.scss */ \"./src/sass/px-to-rem.scss\");\n/* harmony import */ var _sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sass_px_to_rem_scss__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../sass/styles.scss */ \"./src/sass/styles.scss\");\n/* harmony import */ var _sass_styles_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_styles_scss__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _app_app__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app/app */ \"./src/javascript/app/app.js\");\n/* harmony import */ var _app_app__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_app_app__WEBPACK_IMPORTED_MODULE_4__);\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/javascript/index.js?");
 
 /***/ }),
 
@@ -128,17 +128,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var norm
 /***/ (function(module, exports, __webpack_require__) {
 
 eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/fonts.scss?");
-
-/***/ }),
-
-/***/ "./src/sass/parallax.scss":
-/*!********************************!*\
-  !*** ./src/sass/parallax.scss ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/sass/parallax.scss?");
 
 /***/ }),
 

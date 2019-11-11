@@ -38,6 +38,9 @@ module.exports = {
                 ]
             },
             {
+                test: /\.js$/
+            },
+            {
                 test: /\.(woff|woff2|ttf|otf|eot)$/,
                 use: [
                     {

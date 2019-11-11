@@ -346,22 +346,6 @@ template {
   src: url(fonts/ed1d014bf2b8b72f27d6af65c69f710a.ttf);
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-body {
-  overflow: auto;
-  perspective: 1px;
-  transform-style: preserve-3d;
-}
-body, body * {
-  transform-style: preserve-3d;
-}
 /*General settings*/
 ::-webkit-scrollbar {
   display: none;
@@ -371,6 +355,17 @@ html {
   overflow: auto;
   scrollbar-width: none;
   font-size: 18px;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  perspective: 2px;
+  transform-style: preserve-3d;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .container {
@@ -398,6 +393,103 @@ ul, ol {
   padding: 0;
 }
 
-.parallax-wrapper > * {
+.parallax-wrapper {
+  height: 100vh;
+  overflow-x: hidden;
+}
+.parallax-wrapper .parallax-group {
+  position: relative;
+  border: 1px solid black;
+}
+
+section {
+  position: relative;
+  display: flex;
+}
+
+.parallax-element:after {
   position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url(images/75ef7cfa1f274dc2c64cde0a89b9aff1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
+}
+
+.welcome-page {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), black);
+}
+.welcome-page h1 {
+  position: absolute;
+  top: 35%;
+  font-size: 14vh;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.16);
+}
+
+header {
+  background-color: #99bda6;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+header .menu {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+header .menu a {
+  color: white;
+  padding: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  position: relative;
+  font-size: 0.8889rem;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition-property: color;
+  transition-duration: 0.4s;
+}
+header .menu a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  transform: scaleX(0);
+  transform-origin: 50% 100%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+header .menu a:hover, header .menu a:active, header .menu a.active {
+  color: #658c72;
+}
+header .menu a:hover:before, header .menu a:active:before, header .menu a.active:before {
+  transform: scaleX(1);
+}
+
+main .main-group {
+  background-color: #ffffff;
+  z-index: 4;
+}
+main .parallax-group {
+  overflow: hidden;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
+}
+main .parallax-element:after {
+  background-position: 0 10%;
 }
