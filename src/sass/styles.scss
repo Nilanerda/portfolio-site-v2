@@ -1,5 +1,6 @@
 /*General settings*/
 
+
 @mixin title-fonts {
     font-family: 'Turret Road', cursive;
     font-weight: bold;
@@ -145,6 +146,63 @@ ul, ol {
             .gallery-content {
                 margin-bottom: 15rem;
                 color: rgba(255, 255, 255, 0.85);
+                .slick-carousel-wrapper {
+                    margin-top: 2rem;
+                    .slick-carousel {
+                        .slick-carousel-element {
+                            background: {
+                                color: #ffffff;
+                            };
+                            min-height: 12rem;
+                        }
+                        .slick-active {
+                            padding: 2rem 0;
+                            opacity: 0.8;
+                            transition: all 300ms ease;
+                        }
+                        .slick-center {
+                            transform: scale(1.08);
+                            opacity: 1;
+                        }
+                        .slick-slide:not(.slick-active) {
+                            margin: 2rem 0;
+                            opacity: 0.8;
+                        }
+                        .slick-arrow {
+                            cursor: pointer;
+                        }
+                        .slick-prev {
+                            width: auto;
+                            height: auto;
+                            left: -50px;
+                            &:before {
+                                background: {
+                                    image: url("../images/left-arrow.svg");
+                                    size: 50px 50px;
+                                }
+                                display: inline-block;
+                                width: 50px;
+                                height: 50px;
+                                content:"";
+                            }
+                        }
+                        .slick-next {
+                            width: auto;
+                            height: auto;
+                            right: -50px;
+                            &:before {
+                                background: {
+                                    image: url("../images/right-arrow.svg");
+                                    size: 50px 50px;
+                                };
+                                display: inline-block;
+                                width: 50px;
+                                height: 50px;
+                                content:"";
+                            }
+                        }
+                    }
+                }
             }
 
             .contact-content-background {
