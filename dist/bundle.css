@@ -374,10 +374,10 @@ body {
 }
 
 main .container {
-  padding: 40px 20px 20px;
+  padding: 40px 20px;
 }
 
-h1, h2, h3, h4, h5, h6, .menu li a {
+h1, h2, h3, h4, h5, h6 {
   font-family: "Turret Road", cursive;
   font-weight: bold;
   margin: 0;
@@ -386,68 +386,51 @@ h1, h2, h3, h4, h5, h6, .menu li a {
 p {
   font-family: "Titillium Web", sans-serif;
   line-height: 1.4rem;
+  margin-bottom: 0;
 }
 
 ul, ol {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 .parallax-wrapper {
   height: 100vh;
   overflow-x: hidden;
 }
-.parallax-wrapper .parallax-group {
-  position: relative;
-  border: 1px solid black;
-}
-
-section {
+.parallax-wrapper section {
   position: relative;
   display: flex;
 }
-
-.parallax-element:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(images/75ef7cfa1f274dc2c64cde0a89b9aff1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: translateZ(-1px) scale(1.5);
-  z-index: -1;
-}
-
-.welcome-page {
+.parallax-wrapper .welcome-page {
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), black);
 }
-.welcome-page h1 {
+.parallax-wrapper .welcome-page h1 {
   position: absolute;
   top: 35%;
   font-size: 14vh;
   text-align: center;
   color: rgba(255, 255, 255, 0.16);
 }
-
-header {
+.parallax-wrapper header {
   background-color: #99bda6;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 5;
 }
-header .menu {
+.parallax-wrapper header .menu {
   display: flex;
-  list-style: none;
   justify-content: center;
 }
-header .menu a {
+.parallax-wrapper header .menu a {
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  margin: 0;
   color: white;
   padding: 30px;
   text-decoration: none;
@@ -460,7 +443,7 @@ header .menu a {
   transition-property: color;
   transition-duration: 0.4s;
 }
-header .menu a:before {
+.parallax-wrapper header .menu a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -475,21 +458,82 @@ header .menu a:before {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-header .menu a:hover, header .menu a:active, header .menu a.active {
+.parallax-wrapper header .menu a:hover, .parallax-wrapper header .menu a:active, .parallax-wrapper header .menu a.active {
   color: #658c72;
 }
-header .menu a:hover:before, header .menu a:active:before, header .menu a.active:before {
+.parallax-wrapper header .menu a:hover:before, .parallax-wrapper header .menu a:active:before, .parallax-wrapper header .menu a.active:before {
   transform: scaleX(1);
 }
-
-main .main-group {
+.parallax-wrapper main .main-group {
   background-color: #ffffff;
   z-index: 4;
 }
-main .parallax-group {
+.parallax-wrapper main .parallax-group {
+  position: relative;
   overflow: hidden;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
 }
-main .parallax-element:after {
+.parallax-wrapper main .parallax-group .gallery-content {
+  margin-bottom: 15rem;
+}
+.parallax-wrapper main .parallax-group .contact-content-background {
+  position: absolute;
+  bottom: -23.5rem;
+  background-color: rgba(255, 255, 255, 0.86);
+  height: 600px;
+  width: 600px;
+  clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
+  transition: 1s;
+}
+.parallax-wrapper main .parallax-group .contact-content-background:hover {
+  transform: translateY(-32%);
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container {
+  position: absolute;
+  top: 20%;
+  left: 17%;
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container h2 {
+  margin-bottom: 4rem;
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul {
+  display: flex;
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a {
+  margin: 0.8rem;
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a :nth-of-type(1) {
+  margin-left: 0;
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#gmaillIcon {
+  background-image: url(images/b8dd0f4356902792a84ec4d4657ec59f.svg);
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#githubIcon {
+  background-image: url(images/76d344f08412543c74ccd1fb2493d607.svg);
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#linkedinIcon {
+  background-image: url(images/9e36c8fd15d6f93ed6a45f9484746e8f.svg);
+}
+.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#facebookIcon {
+  background-image: url(images/d99368ca4e133a9917838e76243e8cfb.svg);
+}
+.parallax-wrapper .parallax-element:after {
   background-position: 0 10%;
+  background-image: url(images/75ef7cfa1f274dc2c64cde0a89b9aff1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: translateZ(-1px) scale(1.5);
+  z-index: -1;
 }

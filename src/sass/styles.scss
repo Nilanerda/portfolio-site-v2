@@ -1,156 +1,220 @@
 /*General settings*/
 
+@mixin title-fonts {
+    font-family: 'Turret Road', cursive;
+    font-weight: bold;
+}
+
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 html {
-  overflow: auto;
-  scrollbar-width: none;
-  font-size: 18px;
-  height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    font-size: 18px;
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  perspective: 2px;
-  transform-style: preserve-3d;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    perspective: 2px;
+    transform-style: preserve-3d;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main .container {
-  padding: 40px 20px 20px;
+    padding: 40px 20px;
 }
 
-h1, h2, h3, h4, h5, h6, .menu li a {
-  font-family: 'Turret Road', cursive;
-  font-weight: bold;
-  margin: 0;
+h1, h2, h3, h4, h5, h6 {
+    @include title-fonts;
+    margin: 0;
 }
 
 p {
-  font-family: 'Titillium Web', sans-serif;
-  line-height: 1.4rem;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.4rem;
+	margin-bottom: 0;
 }
 
 ul, ol {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .parallax-wrapper {
-  height: 100vh;
-  overflow-x: hidden;
-  .parallax-group {
-    position: relative;
-    border: 1px solid black;
-  }
-}
-
-section {
-  position: relative;
-  display: flex;
-}
-
-.parallax-element:after {
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background:  {
-    image: url("../images/waterfall.jpg");
-    size: cover;
-    repeat: no-repeat;
-  };
-  transform: translateZ(-1px) scale(1.5);
-  z-index: -1;
-}
-
-.welcome-page {
-  justify-content: center;
-  align-items: center;
-  height: 100vh ;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgb(0, 0, 0));
-  h1 {
-    position: absolute;
-    top: 35%;
-    font-size: 14vh;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.16);
-  }
-}
-
-header {
-    background-color: #99bda6;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 5;
-    .menu {
-      display: flex;
-      list-style: none;
-      justify-content: center;
-      a {
-        color: white;
-        padding: 30px;
-        text-decoration: none;
-        text-transform: uppercase;
-        display: block;
+    height: 100vh;
+    overflow-x: hidden;
+    section {
         position: relative;
-        font-size: 0.8889rem;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-        transition-property: color;
-        transition-duration: 0.4s;
-      }
-      a:before {
-        content: "";
-        position: absolute;
-        z-index: -1;
+        display: flex;
+    }
+    .welcome-page {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgb(0, 0, 0));
+
+        h1 {
+            position: absolute;
+            top: 35%;
+            font-size: 14vh;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.16);
+        }
+    }
+    header {
+        background-color: #99bda6;
+        position: sticky;
         top: 0;
-        left: 0;
+        width: 100%;
+        z-index: 5;
+
+        .menu {
+            display: flex;
+            justify-content: center;
+
+            a {
+                @include title-fonts;
+                margin: 0;
+                color: white;
+                padding: 30px;
+                text-decoration: none;
+                text-transform: uppercase;
+                display: block;
+                position: relative;
+                font-size: 0.8889rem;
+                transform: translateZ(0);
+                backface-visibility: hidden;
+                transition-property: color;
+                transition-duration: 0.4s;
+            }
+
+            a:before {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: white;
+                transform: scaleX(0);
+                transform-origin: 50% 100%;
+                transition-property: transform;
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            }
+
+            a:hover, a:active, a.active {
+                color: #658c72;
+            }
+
+            a:hover:before, a:active:before, a.active:before {
+                transform: scaleX(1);
+            }
+        }
+    }
+    main {
+        .main-group {
+            background: {
+                color: #ffffff;
+            };
+            z-index: 4;
+        }
+        .parallax-group {
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
+            .gallery-content {
+                margin-bottom: 15rem;
+            }
+            .contact-content-background {
+                position: absolute;
+                bottom: -23.5rem;
+                background:  {
+                    color: rgba(255, 255, 255, 0.86);
+                };
+                height: 600px;
+                width: 600px;
+                clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
+                transition: 1s;
+                &:hover {
+                    transform: translateY(-32%);
+                }
+                .contact-info-container {
+                    position: absolute;
+                    top: 20%;
+                    left: 17%;
+                    h2 {
+                        margin-bottom: 4rem;
+                    }
+                    ul {
+                        display: flex;
+                        a {
+                            margin: 0.8rem;
+                            display: block;
+                            width: 2.5rem;
+                            height: 2.5rem;
+                            background: {
+                                size: cover;
+                                repeat: no-repeat;
+                                position: center;
+                            };
+                            :nth-of-type(1) {
+                                margin-left: 0;
+                            }
+                            &#gmaillIcon {
+                                background: {
+                                    image: url("../images/gmail.svg");
+                                };
+                            }
+                            &#githubIcon {
+                                background: {
+                                    image: url("../images/github-logo.svg");
+                                };
+                            }
+                            &#linkedinIcon {
+                                background: {
+                                    image: url("../images/linkedin.svg");
+                                };
+                            }
+                            &#facebookIcon {
+                                background: {
+                                    image: url("../images/facebook.svg");
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .parallax-element:after {
+        background: {
+            position: 0 10%;
+            image: url("../images/waterfall.jpg");
+            size: cover;
+            repeat: no-repeat;
+        };
+        position: absolute;
+        content: "";
+        top: 0;
         right: 0;
         bottom: 0;
-        background: white;
-        transform: scaleX(0);
-        transform-origin: 50% 100%;
-        transition-property: transform;
-        transition-duration: 0.3s;
-        transition-timing-function: ease-out;
-      }
-      a:hover, a:active, a.active {
-        color: #658c72;
-      }
-      a:hover:before, a:active:before, a.active:before {
-        transform: scaleX(1);
-      }
+        left: 0;
+        transform: translateZ(-1px) scale(1.5);
+        z-index: -1;
     }
 }
 
-main {
-  .main-group {
-    background:  {
-      color: #ffffff;
-    };
-    z-index: 4;
-  }
-  .parallax-group {
-    overflow: hidden;
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
-  }
-  .parallax-element:after {
-    background: {
-      position: 0 10%;
-    };
-  }
-}
