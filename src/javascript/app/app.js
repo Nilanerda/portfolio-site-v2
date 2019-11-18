@@ -1,8 +1,3 @@
-window.onscroll = function() {
-    hideWelcomePage();
-    animateNavTabs();
-};
-
 function hideWelcomePage() {
     let welcomePage = document.getElementById('welcomePage');
     let header = document.getElementById('header');
@@ -39,3 +34,8 @@ for (let navlink of navLinks) {
         scrollOnClick(navlink.hash.substr(1));
     })
 }
+
+window.addEventListener('scroll', function () {
+    hideWelcomePage();
+    animateNavTabs();
+});

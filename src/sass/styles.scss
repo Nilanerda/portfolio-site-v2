@@ -32,7 +32,7 @@ body {
 }
 
 main .container {
-    padding: 40px 20px;
+    padding: 2.7778rem 1.1111rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -43,7 +43,7 @@ h1, h2, h3, h4, h5, h6 {
 p {
     font-family: 'Titillium Web', sans-serif;
     line-height: 1.4rem;
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 ul, ol {
@@ -55,10 +55,12 @@ ul, ol {
 .parallax-wrapper {
     height: 100vh;
     overflow-x: hidden;
+
     section {
         position: relative;
         display: flex;
     }
+
     .welcome-page {
         justify-content: center;
         align-items: center;
@@ -73,6 +75,7 @@ ul, ol {
             color: rgba(255, 255, 255, 0.16);
         }
     }
+
     header {
         background-color: #99bda6;
         position: sticky;
@@ -125,6 +128,7 @@ ul, ol {
             }
         }
     }
+
     main {
         .main-group {
             background: {
@@ -132,35 +136,44 @@ ul, ol {
             };
             z-index: 4;
         }
+
         .parallax-group {
             position: relative;
             overflow: hidden;
             background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
+
             .gallery-content {
                 margin-bottom: 15rem;
+                color: rgba(255, 255, 255, 0.85);
             }
+
             .contact-content-background {
                 position: absolute;
                 bottom: -23.5rem;
-                background:  {
+                background: {
                     color: rgba(255, 255, 255, 0.86);
                 };
                 height: 600px;
                 width: 600px;
                 clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
                 transition: 1s;
+
                 &:hover {
                     transform: translateY(-32%);
                 }
+
                 .contact-info-container {
                     position: absolute;
                     top: 20%;
                     left: 17%;
+
                     h2 {
                         margin-bottom: 4rem;
                     }
+
                     ul {
                         display: flex;
+
                         a {
                             margin: 0.8rem;
                             display: block;
@@ -171,35 +184,41 @@ ul, ol {
                                 repeat: no-repeat;
                                 position: center;
                             };
-                            :nth-of-type(1) {
-                                margin-left: 0;
-                            }
+
                             &#gmaillIcon {
                                 background: {
                                     image: url("../images/gmail.svg");
                                 };
                             }
+
                             &#githubIcon {
                                 background: {
                                     image: url("../images/github-logo.svg");
                                 };
                             }
+
                             &#linkedinIcon {
                                 background: {
                                     image: url("../images/linkedin.svg");
                                 };
                             }
+
                             &#facebookIcon {
                                 background: {
                                     image: url("../images/facebook.svg");
                                 };
                             }
                         }
+
+                        :first-child a {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
         }
     }
+
     .parallax-element:after {
         background: {
             position: 0 10%;
