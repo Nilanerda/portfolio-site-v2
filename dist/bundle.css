@@ -836,6 +836,7 @@ ul, ol {
 }
 .parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container h2 {
   margin-bottom: 4rem;
+  color: #000;
 }
 .parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul {
   display: flex;
