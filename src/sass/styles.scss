@@ -88,44 +88,44 @@ ul, ol {
             display: flex;
             justify-content: center;
 
-            a {
-                @include title-fonts;
-                margin: 0;
-                color: white;
-                padding: 30px;
-                text-decoration: none;
-                text-transform: uppercase;
-                display: block;
-                position: relative;
-                font-size: 0.8889rem;
-                transform: translateZ(0);
-                backface-visibility: hidden;
-                transition-property: color;
-                transition-duration: 0.4s;
-            }
+            li {
 
-            a:before {
-                content: "";
-                position: absolute;
-                z-index: -1;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: white;
-                transform: scaleX(0);
-                transform-origin: 50% 100%;
-                transition-property: transform;
-                transition-duration: 0.3s;
-                transition-timing-function: ease-out;
-            }
-
-            a:hover, a:active, a.active {
-                color: #658c72;
-            }
-
-            a:hover:before, a:active:before, a.active:before {
-                transform: scaleX(1);
+                a {
+                    @include title-fonts;
+                    margin: 0;
+                    color: white;
+                    padding: 30px;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    display: block;
+                    position: relative;
+                    font-size: 0.8889rem;
+                    transform: translateZ(0);
+                    backface-visibility: hidden;
+                    transition-property: color;
+                    transition-duration: 0.4s;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: white;
+                        transform: scaleX(0);
+                        transform-origin: 50% 100%;
+                        transition-property: transform;
+                        transition-duration: 0.3s;
+                        transition-timing-function: ease-out;
+                    }
+                    &:hover, &:active,  &.active{
+                        color: #658c72;
+                    }
+                    &:hover:before, &:active:before, &.active:before {
+                        transform: scaleX(1);
+                    }
+                }
             }
         }
     }

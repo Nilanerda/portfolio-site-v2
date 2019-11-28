@@ -704,7 +704,7 @@ ul, ol {
   display: flex;
   justify-content: center;
 }
-.parallax-wrapper header .menu a {
+.parallax-wrapper header .menu li a {
   font-family: "Turret Road", cursive;
   font-weight: bold;
   margin: 0;
@@ -720,7 +720,7 @@ ul, ol {
   transition-property: color;
   transition-duration: 0.4s;
 }
-.parallax-wrapper header .menu a:before {
+.parallax-wrapper header .menu li a:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -735,10 +735,10 @@ ul, ol {
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-.parallax-wrapper header .menu a:hover, .parallax-wrapper header .menu a:active, .parallax-wrapper header .menu a.active {
+.parallax-wrapper header .menu li a:hover, .parallax-wrapper header .menu li a:active, .parallax-wrapper header .menu li a.active {
   color: #658c72;
 }
-.parallax-wrapper header .menu a:hover:before, .parallax-wrapper header .menu a:active:before, .parallax-wrapper header .menu a.active:before {
+.parallax-wrapper header .menu li a:hover:before, .parallax-wrapper header .menu li a:active:before, .parallax-wrapper header .menu li a.active:before {
   transform: scaleX(1);
 }
 .parallax-wrapper main .main-group {
