@@ -1,6 +1,5 @@
 /*General settings*/
 
-
 @mixin title-fonts {
     font-family: 'Turret Road', cursive;
     font-weight: bold;
@@ -139,15 +138,14 @@ ul, ol {
         }
 
         .parallax-group {
-            position: relative;
             overflow: hidden;
             background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
 
             .gallery-content {
-                margin-bottom: 15rem;
+                overflow: hidden;
                 color: rgba(255, 255, 255, 0.85);
                 .slick-carousel-wrapper {
-                    margin-top: 2rem;
+                    margin: 2rem 0 15rem;
                     .slick-carousel {
                         .slick-slide {
                             -webkit-transform: translate3d(0,0,0)
@@ -218,77 +216,82 @@ ul, ol {
                         margin-top: 1.5rem;
                     }
                 }
-            }
 
-            .contact-content-background {
-                position: absolute;
-                bottom: -23.5rem;
-                background: {
-                    color: rgba(255, 255, 255, 0.86);
-                };
-                height: 600px;
-                width: 600px;
-                clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
-                transition: 1s;
-
-                &:hover {
-                    transform: translateY(-32%);
-                }
-
-                .contact-info-container {
+                .contact-content-background {
                     position: absolute;
-                    top: 20%;
-                    left: 17%;
+                    bottom: -23.5rem;
+                    background: {
+                        color: rgba(255, 255, 255, 0.86);
+                    };
+                    height: 600px;
+                    width: 600px;
+                    clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
+                    transition: 1s;
 
-                    h2 {
-                        margin-bottom: 4rem;
+                    &:hover {
+                        transform: translateY(-32%);
                     }
 
-                    ul {
-                        display: flex;
+                    .contact-info-container {
+                        position: absolute;
+                        top: 20%;
+                        left: 17%;
 
-                        a {
-                            margin: 0.8rem;
-                            display: block;
-                            width: 2.5rem;
-                            height: 2.5rem;
-                            background: {
-                                size: cover;
-                                repeat: no-repeat;
-                                position: center;
-                            };
-
-                            &#gmaillIcon {
-                                background: {
-                                    image: url("../images/gmail.svg");
-                                };
-                            }
-
-                            &#githubIcon {
-                                background: {
-                                    image: url("../images/github-logo.svg");
-                                };
-                            }
-
-                            &#linkedinIcon {
-                                background: {
-                                    image: url("../images/linkedin.svg");
-                                };
-                            }
-
-                            &#facebookIcon {
-                                background: {
-                                    image: url("../images/facebook.svg");
-                                };
-                            }
+                        h2 {
+                            margin-bottom: 4rem;
                         }
 
-                        :first-child a {
-                            margin-left: 0;
+                        ul {
+                            display: flex;
+
+                            a {
+                                margin: 0.8rem;
+                                display: block;
+                                width: 2.5rem;
+                                height: 2.5rem;
+                                background: {
+                                    size: cover;
+                                    repeat: no-repeat;
+                                    position: center;
+                                };
+
+                                &#gmaillIcon {
+                                    background: {
+                                        image: url("../images/gmail.svg");
+                                    };
+                                }
+
+                                &#githubIcon {
+                                    background: {
+                                        image: url("../images/github-logo.svg");
+                                    };
+                                }
+
+                                &#linkedinIcon {
+                                    background: {
+                                        image: url("../images/linkedin.svg");
+                                    };
+                                }
+
+                                &#facebookIcon {
+                                    background: {
+                                        image: url("../images/facebook.svg");
+                                    };
+                                }
+                            }
+
+                            :first-child a {
+                                margin-left: 0;
+                            }
                         }
                     }
                 }
+
+                &.parallax-element:after {
+                    min-height: 100vh;
+                }
             }
+
         }
     }
 

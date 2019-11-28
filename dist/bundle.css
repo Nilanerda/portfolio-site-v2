@@ -746,16 +746,15 @@ ul, ol {
   z-index: 4;
 }
 .parallax-wrapper main .parallax-group {
-  position: relative;
   overflow: hidden;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.51));
 }
 .parallax-wrapper main .parallax-group .gallery-content {
-  margin-bottom: 15rem;
+  overflow: hidden;
   color: rgba(255, 255, 255, 0.85);
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper {
-  margin-top: 2rem;
+  margin: 2rem 0 15rem;
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide {
   -webkit-transform: translate3d(0, 0, 0);
@@ -818,7 +817,7 @@ ul, ol {
   min-height: 8rem;
   margin-top: 1.5rem;
 }
-.parallax-wrapper main .parallax-group .contact-content-background {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background {
   position: absolute;
   bottom: -23.5rem;
   background-color: rgba(255, 255, 255, 0.86);
@@ -827,21 +826,21 @@ ul, ol {
   clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
   transition: 1s;
 }
-.parallax-wrapper main .parallax-group .contact-content-background:hover {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background:hover {
   transform: translateY(-32%);
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container {
   position: absolute;
   top: 20%;
   left: 17%;
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container h2 {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container h2 {
   margin-bottom: 4rem;
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul {
   display: flex;
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul a {
   margin: 0.8rem;
   display: block;
   width: 2.5rem;
@@ -850,20 +849,23 @@ ul, ol {
   background-repeat: no-repeat;
   background-position: center;
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#gmaillIcon {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul a#gmaillIcon {
   background-image: url(images/b8dd0f4356902792a84ec4d4657ec59f.svg);
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#githubIcon {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul a#githubIcon {
   background-image: url(images/76d344f08412543c74ccd1fb2493d607.svg);
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#linkedinIcon {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul a#linkedinIcon {
   background-image: url(images/9e36c8fd15d6f93ed6a45f9484746e8f.svg);
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul a#facebookIcon {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul a#facebookIcon {
   background-image: url(images/d99368ca4e133a9917838e76243e8cfb.svg);
 }
-.parallax-wrapper main .parallax-group .contact-content-background .contact-info-container ul :first-child a {
+.parallax-wrapper main .parallax-group .gallery-content .contact-content-background .contact-info-container ul :first-child a {
   margin-left: 0;
+}
+.parallax-wrapper main .parallax-group .gallery-content.parallax-element:after {
+  min-height: 100vh;
 }
 .parallax-wrapper .parallax-element:after {
   background-position: 0 10%;

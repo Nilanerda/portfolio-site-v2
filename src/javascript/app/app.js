@@ -1,3 +1,9 @@
+let parallaxWrapper = document.getElementById('parallaxWrapper');
+parallaxWrapper.addEventListener('scroll', function () {
+    hideWelcomePage();
+    animateNavTabs();
+});
+
 function hideWelcomePage() {
     let welcomePage = document.getElementById('welcomePage');
     let header = document.getElementById('header');
@@ -24,7 +30,7 @@ function animateNavTabs() {
 function scrollOnClick(elementId) {
     let sectionTop = document.getElementById(elementId).offsetTop;
     let headerHeight = document.getElementById('header').getBoundingClientRect().height;
-    window.scrollTo({top: sectionTop - headerHeight, behavior: "smooth"})
+    parallaxWrapper.scrollTo({top: sectionTop - headerHeight, behavior: "smooth"})
 }
 
 let navLinks = document.querySelectorAll('a[href*="#nav"]');
@@ -34,8 +40,3 @@ for (let navlink of navLinks) {
         scrollOnClick(navlink.hash.substr(1));
     })
 }
-
-window.addEventListener('scroll', function () {
-    hideWelcomePage();
-    animateNavTabs();
-});
