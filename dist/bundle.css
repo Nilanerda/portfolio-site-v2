@@ -345,7 +345,6 @@ template {
   font-family: "Titillium Web";
   src: url(fonts/ed1d014bf2b8b72f27d6af65c69f710a.ttf);
 }
-
 /* Slider */
 .slick-slider {
   position: relative;
@@ -670,6 +669,36 @@ ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: black;
+}
+.preloader .preloader-item {
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  font-size: 1.3333333333rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  cursor: not-allowed;
+}
+.preloader.loaded {
+  display: none;
+}
+.preloader.smooth-hiding {
+  transition: 1s opacity;
+  opacity: 0;
 }
 
 .parallax-wrapper {

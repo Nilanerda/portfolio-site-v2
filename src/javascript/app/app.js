@@ -4,6 +4,17 @@ parallaxWrapper.addEventListener('scroll', function () {
     animateNavTabs();
 });
 
+window.addEventListener('load',function () {
+    let preloader = document.getElementById('preloader');
+    window.setTimeout( function () {
+        preloader.classList.add('smooth-hiding');
+    }, 4000);
+    window.setTimeout(function () {
+        preloader.classList.add('loaded');
+        preloader.classList.remove('smooth-hiding');
+    }, 5000);
+});
+
 function hideWelcomePage() {
     let welcomePage = document.getElementById('welcomePage');
     let header = document.getElementById('header');

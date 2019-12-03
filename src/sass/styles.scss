@@ -1,9 +1,19 @@
-/*General settings*/
+//Mixins
+@function calculateRem($size) {
+    $remSize: $size / 18px;
+    @return #{$remSize}rem;
+}
+
+@mixin fontSize($size) {
+    font-size: calculateRem($size);
+}
 
 @mixin title-fonts {
     font-family: 'Turret Road', cursive;
     font-weight: bold;
 }
+
+/*General settings*/
 
 ::-webkit-scrollbar {
     display: none;
@@ -50,6 +60,37 @@ ul, ol {
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+    background: {
+        color: black;
+    };
+    .preloader-item {
+        @include title-fonts;
+        @include fontSize(24px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #ffffff;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        cursor: not-allowed;
+    }
+    &.loaded {
+        display: none;
+    }
+    &.smooth-hiding {
+        transition: 1s opacity;
+        opacity: 0;
+    }
 }
 
 .parallax-wrapper {
