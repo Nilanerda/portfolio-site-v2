@@ -1,3 +1,10 @@
+//media breakpoints
+$xs: 576px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
 //Mixins
 @function calculateRem($size) {
     $remSize: $size / 18px;
@@ -37,12 +44,8 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    width: 85%;
     margin: 0 auto;
-}
-
-main .container {
-    padding: 2.7778rem 1.1111rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -107,6 +110,14 @@ ul, ol {
             font-size: 14vh;
             text-align: center;
             color: rgba(255, 255, 255, 0.16);
+
+            @media screen and (max-width: $xs) {
+                font-size: 10vh;
+                top: 32%;
+            };
+            @media screen and (max-width: $xs) and (min-height: 800px){
+                font-size: 9vh;
+            }
         }
     }
 
@@ -164,6 +175,10 @@ ul, ol {
     }
 
     main {
+        .container {
+            padding: 2.7778rem 1.1111rem;
+        }
+
         .main-group {
             background: {
                 color: #ffffff;
