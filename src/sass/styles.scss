@@ -84,13 +84,6 @@ ul, ol {
         text-orientation: upright;
         cursor: not-allowed;
     }
-    &.loaded {
-        display: none;
-    }
-    &.smooth-hiding {
-        transition: 1s opacity;
-        opacity: 0;
-    }
 }
 
 .parallax-wrapper {

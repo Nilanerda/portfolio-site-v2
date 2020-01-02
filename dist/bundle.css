@@ -693,13 +693,6 @@ ul, ol {
   text-orientation: upright;
   cursor: not-allowed;
 }
-.preloader.loaded {
-  display: none;
-}
-.preloader.smooth-hiding {
-  transition: 1s opacity;
-  opacity: 0;
-}
 
 .parallax-wrapper {
   height: 100vh;
