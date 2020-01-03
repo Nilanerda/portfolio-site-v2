@@ -788,14 +788,28 @@ ul, ol {
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper {
   margin: 2rem 0 15rem;
 }
+@media screen and (max-width: 576px) {
+  .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide {
   -webkit-transform: translate3d(0, 0, 0);
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-carousel-element {
   background-color: #ffffff;
-  min-height: 12rem;
+  background-image: url(images/8b1e95626e59fffdf933c12b2b41fce5.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 12rem;
   color: #000;
   text-align: center;
+}
+@media screen and (max-width: 576px) {
+  .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-carousel-element {
+    height: 8rem;
+  }
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-active {
   padding: 2rem 0;
@@ -849,6 +863,11 @@ ul, ol {
   min-height: 8rem;
   margin-top: 1.5rem;
 }
+@media screen and (max-width: 576px) {
+  .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .sub-carousel {
+    margin-top: 0;
+  }
+}
 .parallax-wrapper main .parallax-group .gallery-content .contact-content-background {
   position: absolute;
   bottom: -23.5rem;
@@ -857,6 +876,16 @@ ul, ol {
   width: 600px;
   clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
   transition: 1s;
+}
+@media screen and (max-width: 576px), (min-width: 576px) {
+  .parallax-wrapper main .parallax-group .gallery-content .contact-content-background {
+    left: -3rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .parallax-wrapper main .parallax-group .gallery-content .contact-content-background {
+    left: -1rem;
+  }
 }
 .parallax-wrapper main .parallax-group .gallery-content .contact-content-background:hover {
   transform: translateY(-32%);

@@ -2,9 +2,25 @@ $(document).ready(function () {
     $('.slick-carousel').slick({
         centerMode: true,
         centerPadding: '0',
-        slidesToShow: 3,
         infinite: true,
-        asNavFor: '.sub-carousel'
+        slidesToShow: 3,
+        asNavFor: '.sub-carousel',
+        responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false
+            }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 1,
+                centerMode: false
+            }
+        }
+        ]
     });
     $('.sub-carousel').slick({
         slidesToShow: 1,

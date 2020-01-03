@@ -170,7 +170,7 @@ eval("/* WEBPACK VAR INJECTION */(function($) {$(window).on('load', function () 
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  $('.slick-carousel').slick({\n    centerMode: true,\n    centerPadding: '0',\n    slidesToShow: 3,\n    infinite: true,\n    asNavFor: '.sub-carousel'\n  });\n  $('.sub-carousel').slick({\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    arrows: false,\n    fade: true,\n    asNavFor: '.slick-carousel'\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/javascript/app/slick-carousel.js?");
+eval("/* WEBPACK VAR INJECTION */(function($) {$(document).ready(function () {\n  $('.slick-carousel').slick({\n    centerMode: true,\n    centerPadding: '0',\n    infinite: true,\n    slidesToShow: 3,\n    asNavFor: '.sub-carousel',\n    responsive: [{\n      breakpoint: 768,\n      settings: {\n        slidesToShow: 1,\n        centerMode: false\n      }\n    }, {\n      breakpoint: 576,\n      settings: {\n        slidesToShow: 1,\n        centerMode: false\n      }\n    }]\n  });\n  $('.sub-carousel').slick({\n    slidesToShow: 1,\n    slidesToScroll: 1,\n    arrows: false,\n    fade: true,\n    asNavFor: '.slick-carousel'\n  });\n});\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\")))\n\n//# sourceURL=webpack:///./src/javascript/app/slick-carousel.js?");
 
 /***/ }),
 

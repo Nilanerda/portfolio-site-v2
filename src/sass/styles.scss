@@ -196,16 +196,26 @@ ul, ol {
                 .slick-carousel-wrapper {
                     margin: 2rem 0 15rem;
                     .slick-carousel {
+                        @media screen and (max-width: $xs){
+                            width: 80%;
+                            margin: 0 auto;
+                        }
                         .slick-slide {
                             -webkit-transform: translate3d(0,0,0)
                         }
                         .slick-carousel-element {
                             background: {
                                 color: #ffffff;
+                                image: url("../images/iero.jpg");
+                                size: cover;
+                                position: center;
                             };
-                            min-height: 12rem;
+                            height: 12rem;
                             color: #000;
                             text-align: center;
+                            @media screen and (max-width: $xs) {
+                                height: 8rem;
+                            }
                         }
                         .slick-active {
                             padding: 2rem 0;
@@ -263,6 +273,9 @@ ul, ol {
                     .sub-carousel {
                         min-height: 8rem;
                         margin-top: 1.5rem;
+                        @media screen and (max-width: $xs) {
+                            margin-top: 0;
+                        }
                     }
                 }
 
@@ -276,7 +289,12 @@ ul, ol {
                     width: 600px;
                     clip-path: polygon(20% 10%, 85% 20%, 100% 65%, 0 65%, 0 33%);
                     transition: 1s;
-
+                    @media screen and (max-width: $xs), (min-width: $sm){
+                        left: -3rem;
+                    }
+                    @media screen and (min-width: $md){
+                        left: -1rem;
+                    }
                     &:hover {
                         transform: translateY(-32%);
                     }
