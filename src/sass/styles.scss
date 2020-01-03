@@ -4,6 +4,7 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
+$xxl: 1600px;
 
 //Mixins
 @function calculateRem($size) {
@@ -215,6 +216,9 @@ ul, ol {
                             text-align: center;
                             @media screen and (max-width: $xs) {
                                 height: 8rem;
+                            }
+                            @media screen and (min-width: $xxl) {
+                                height: 15rem;
                             }
                         }
                         .slick-active {
