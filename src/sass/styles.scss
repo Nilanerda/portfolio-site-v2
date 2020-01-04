@@ -123,11 +123,20 @@ ul, ol {
     }
 
     header {
-        background-color: #99bda6;
+        background: {
+            color: #99bda6;
+        };
         position: sticky;
         top: 0;
         width: 100%;
         z-index: 5;
+        transition: 0.5s;
+        &.changed-color {
+            background: {
+                color: #1c1c1c;
+            };
+            transition: 0.5s;
+        }
 
         .menu {
             display: flex;

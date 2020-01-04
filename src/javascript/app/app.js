@@ -2,6 +2,7 @@ let parallaxWrapper = document.getElementById('parallaxWrapper');
 parallaxWrapper.addEventListener('scroll', function () {
     hideWelcomePage();
     animateNavTabs();
+    changeHeaderColorIntoGallery();
 });
 
 function hideWelcomePage() {
@@ -39,4 +40,16 @@ for (let navlink of navLinks) {
         e.preventDefault();
         scrollOnClick(navlink.hash.substr(1));
     })
+}
+
+function changeHeaderColorIntoGallery() {
+    let gallerySection = document.getElementById('navGallery').getBoundingClientRect();
+    let headerHeight = document.getElementById('header').getBoundingClientRect().height;
+    let header = document.getElementById('header');
+    if (gallerySection.top <= headerHeight && gallerySection.top + gallerySection.height > headerHeight) {
+        header.setAttribute('class', 'changed-color');
+    } else {
+        header.setAttribute('class', '');
+    }
+
 }

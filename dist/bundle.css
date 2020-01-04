@@ -728,6 +728,11 @@ ul, ol {
   top: 0;
   width: 100%;
   z-index: 5;
+  transition: 0.5s;
+}
+.parallax-wrapper header.changed-color {
+  background-color: #1c1c1c;
+  transition: 0.5s;
 }
 .parallax-wrapper header .menu {
   display: flex;
