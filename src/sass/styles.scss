@@ -302,6 +302,9 @@ ul, ol {
                         @media screen and (max-width: $xs) {
                             margin-top: 0;
                         }
+                        p {
+                            text-align: center;
+                        }
                     }
                 }
 

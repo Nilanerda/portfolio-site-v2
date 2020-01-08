@@ -899,6 +899,9 @@ ul, ol {
     margin-top: 0;
   }
 }
+.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .sub-carousel p {
+  text-align: center;
+}
 .parallax-wrapper main .parallax-group .gallery-content .contact-content-background {
   position: absolute;
   bottom: -23.5rem;

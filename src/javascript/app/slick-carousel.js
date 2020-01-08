@@ -4,6 +4,8 @@ $(document).ready(function () {
         centerPadding: '0',
         infinite: true,
         slidesToShow: 3,
+        focusOnSelect: true,
+        dots: false,
         asNavFor: '.sub-carousel',
         responsive: [
         {
