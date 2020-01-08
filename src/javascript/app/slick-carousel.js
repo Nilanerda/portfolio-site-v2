@@ -7,6 +7,7 @@ $(document).ready(function () {
         focusOnSelect: true,
         dots: false,
         asNavFor: '.sub-carousel',
+        autoplay: false,
         responsive: [
         {
             breakpoint: 768,

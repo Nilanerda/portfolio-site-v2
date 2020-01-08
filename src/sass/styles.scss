@@ -194,6 +194,34 @@ ul, ol {
                 color: #ffffff;
             };
             z-index: 4;
+
+            .main-blockquote {
+                margin: 0;
+
+                p {
+                    margin: 1rem 40%;
+                    width: 60%;
+                    text-align: end;
+                    position: relative;
+                    &:before {
+                        content: '”';
+                        position: absolute;
+                        @include fontSize(200px);
+                        top: 2rem;
+                        color: rgba(153, 189, 166, 0.51);
+                    }
+                }
+
+                cite {
+                    display: block;
+                    text-align: right;
+                    @include title-fonts;
+                    font-style: normal;
+                    &:before {
+                        content: '- ';
+                    }
+                }
+            }
         }
 
         .parallax-group {
