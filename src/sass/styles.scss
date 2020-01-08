@@ -203,12 +203,14 @@ ul, ol {
                     width: 60%;
                     text-align: end;
                     position: relative;
+                    z-index: 2;
                     &:before {
                         content: '”';
                         position: absolute;
                         @include fontSize(200px);
                         top: 2rem;
                         color: rgba(153, 189, 166, 0.51);
+                        z-index: -1;
                     }
                 }
 

@@ -791,6 +791,7 @@ ul, ol {
   width: 60%;
   text-align: end;
   position: relative;
+  z-index: 2;
 }
 .parallax-wrapper main .main-group .main-blockquote p:before {
   content: "”";
@@ -798,6 +799,7 @@ ul, ol {
   font-size: 11.1111111111rem;
   top: 2rem;
   color: rgba(153, 189, 166, 0.51);
+  z-index: -1;
 }
 .parallax-wrapper main .main-group .main-blockquote cite {
   display: block;
