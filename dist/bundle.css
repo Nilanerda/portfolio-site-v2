@@ -799,18 +799,28 @@ ul, ol {
     margin: 0 auto;
   }
 }
-.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide {
-  -webkit-transform: translate3d(0, 0, 0);
+.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide, .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide[aria-hidden=true]:not(.slick-cloned) ~ .slick-cloned[aria-hidden=true] {
+  transform: scale(0.8, 0.8);
+  transition: transform 0.3s;
+  opacity: 0.8;
+  outline: none;
+}
+.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-center, .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide[aria-hidden=true]:not([tabindex="-1"]) + .slick-cloned[aria-hidden=true] {
+  transform: scale(1.08, 1.08);
+  transition: transform 0.3s;
+  opacity: 1;
+  outline: none;
+}
+.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-center:hover, .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide[aria-hidden=true]:not([tabindex="-1"]) + .slick-cloned[aria-hidden=true]:hover {
+  transform: scale(1.2);
+  transition: all 300ms ease;
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-carousel-element {
-  background-color: #ffffff;
   background-image: url(images/a4f0c96bd32be4076874779e3cca0232.png), url(images/8b1e95626e59fffdf933c12b2b41fce5.jpg);
   background-size: contain, cover;
   background-position: center;
   background-repeat: no-repeat, repeat;
   height: 12rem;
-  color: #000;
-  text-align: center;
 }
 @media screen and (max-width: 576px) {
   .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-carousel-element {
@@ -824,9 +834,6 @@ ul, ol {
 }
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-active {
   padding: 2rem 0;
-  opacity: 0.8;
-  transition: all 300ms ease;
-  outline: none;
 }
 @media screen and (max-width: 576px) {
   .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-active {
@@ -838,18 +845,8 @@ ul, ol {
     opacity: 1;
   }
 }
-.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-center {
-  transform: scale(1.08);
-  opacity: 1;
-}
-.parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-center:hover {
-  transform: scale(1.15);
-  transition: all 300ms ease;
-}
 .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide:not(.slick-active) {
   margin: 2rem 0;
-  opacity: 0.8;
-  outline: none;
 }
 @media screen and (max-width: 576px) {
   .parallax-wrapper main .parallax-group .gallery-content .slick-carousel-wrapper .slick-carousel .slick-slide:not(.slick-active) {
