@@ -196,7 +196,7 @@ ul, ol {
             z-index: 4;
 
             .main-blockquote {
-                margin: 0;
+                margin: 0 0 3rem;
 
                 p {
                     margin: 1rem 40%;
@@ -205,12 +205,18 @@ ul, ol {
                     position: relative;
                     z-index: 2;
                     &:before {
-                        content: '”';
+                        content: '';
                         position: absolute;
-                        @include fontSize(200px);
-                        top: 2rem;
-                        color: rgba(153, 189, 166, 0.51);
+                        width: 70px;
+                        height: 70px;
+                        top: -1.5rem;
+                        left: 2rem;
                         z-index: -1;
+                        background: {
+                            image: url("../images/quotes.svg");
+                            repeat: no-repeat;
+                            size: cover;
+                        };
                     }
                 }
 
@@ -222,6 +228,13 @@ ul, ol {
                     &:before {
                         content: '- ';
                     }
+                }
+            }
+
+            p {
+                .modified-text {
+                    @include title-fonts;
+                    margin: 0 0.5rem;
                 }
             }
         }
