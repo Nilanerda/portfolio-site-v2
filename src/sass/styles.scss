@@ -21,6 +21,22 @@ $xxl: 1600px;
     font-weight: bold;
 }
 
+@mixin center-alignment {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin skill-outer {
+    color: rgba(153, 189, 166, 0.5);
+    position: absolute;
+    font-weight: normal;
+    font-size: 3rem;
+    z-index: -1;
+    top: -18px;
+}
+
 /*General settings*/
 
 ::-webkit-scrollbar {
@@ -79,10 +95,7 @@ ul, ol {
     .preloader-item {
         @include title-fonts;
         @include fontSize(24px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include center-alignment;
         color: #ffffff;
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -195,46 +208,102 @@ ul, ol {
             };
             z-index: 4;
 
-            .main-blockquote {
-                margin: 0 0 3rem;
+            .home-content {
+                .main-blockquote {
+                    margin: 0 0 3rem;
 
-                p {
-                    margin: 1rem 40%;
-                    width: 60%;
-                    text-align: end;
-                    position: relative;
-                    z-index: 2;
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        width: 70px;
-                        height: 70px;
-                        top: -1.5rem;
-                        left: 2rem;
-                        z-index: -1;
-                        background: {
-                            image: url("../images/quotes.svg");
-                            repeat: no-repeat;
-                            size: cover;
-                        };
+                    p {
+                        margin: 1rem 40%;
+                        width: 60%;
+                        text-align: end;
+                        position: relative;
+                        z-index: 2;
+                        @media screen and (max-width: $xs), (max-width: $sm){
+                            width: 80%;
+                            margin: 1rem 20%;
+                        }
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            width: 70px;
+                            height: 70px;
+                            top: -1.5rem;
+                            left: 2rem;
+                            z-index: -1;
+                            background: {
+                                image: url("../images/quotes.svg");
+                                repeat: no-repeat;
+                                size: cover;
+                            };
+                        }
+                    }
+
+                    cite {
+                        display: block;
+                        text-align: right;
+                        @include title-fonts;
+                        font-style: normal;
+                        &:before {
+                            content: '- ';
+                        }
                     }
                 }
 
-                cite {
-                    display: block;
-                    text-align: right;
-                    @include title-fonts;
-                    font-style: normal;
-                    &:before {
-                        content: '- ';
+                p {
+                    .modified-text {
+                        @include title-fonts;
+                        margin: 0 0.5rem;
                     }
                 }
             }
 
-            p {
-                .modified-text {
-                    @include title-fonts;
-                    margin: 0 0.5rem;
+            .about-content {
+                .about-content-container {
+                    display: flex;
+                    flex-direction: column;
+                    .about-content-skills {
+                        width: 65%;
+                        margin: 3rem 0;
+                        p {
+                            z-index: 1;
+                            position: relative;
+                        }
+                        &:nth-child(odd) {
+                            align-self: flex-start;
+                        }
+                        &:nth-child(even) {
+                            align-self: flex-end;
+                            text-align: right;
+                        }
+                        & .about-content-skills-separator {
+                            display: block;
+                            height: 1rem;
+                        }
+                        &.education > p:before {
+                            content: 'Education & courses';
+                            @include title-fonts;
+                            @include skill-outer;
+                            left: -20px;
+                        }
+                        &.teck-skills > p:before {
+                            content: 'Tech skills';
+                            @include title-fonts;
+                            @include skill-outer;
+                            right:  85px;
+                        }
+                        &.soft-skills > p:before {
+                            content: 'Soft skills';
+                            @include title-fonts;
+                            @include skill-outer;
+                            right: 255px;
+                        }
+                        &.hobbies > p:before {
+                            content: 'Hobbies';
+                            @include title-fonts;
+                            @include skill-outer;
+                            left: 285px;
+                        }
+                    }
                 }
             }
         }

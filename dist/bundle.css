@@ -782,17 +782,23 @@ ul, ol {
   background-color: #ffffff;
   z-index: 4;
 }
-.parallax-wrapper main .main-group .main-blockquote {
+.parallax-wrapper main .main-group .home-content .main-blockquote {
   margin: 0 0 3rem;
 }
-.parallax-wrapper main .main-group .main-blockquote p {
+.parallax-wrapper main .main-group .home-content .main-blockquote p {
   margin: 1rem 40%;
   width: 60%;
   text-align: end;
   position: relative;
   z-index: 2;
 }
-.parallax-wrapper main .main-group .main-blockquote p:before {
+@media screen and (max-width: 576px), (max-width: 576px) {
+  .parallax-wrapper main .main-group .home-content .main-blockquote p {
+    width: 80%;
+    margin: 1rem 20%;
+  }
+}
+.parallax-wrapper main .main-group .home-content .main-blockquote p:before {
   content: "";
   position: absolute;
   width: 70px;
@@ -804,20 +810,91 @@ ul, ol {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.parallax-wrapper main .main-group .main-blockquote cite {
+.parallax-wrapper main .main-group .home-content .main-blockquote cite {
   display: block;
   text-align: right;
   font-family: "Turret Road", cursive;
   font-weight: bold;
   font-style: normal;
 }
-.parallax-wrapper main .main-group .main-blockquote cite:before {
+.parallax-wrapper main .main-group .home-content .main-blockquote cite:before {
   content: "- ";
 }
-.parallax-wrapper main .main-group p .modified-text {
+.parallax-wrapper main .main-group .home-content p .modified-text {
   font-family: "Turret Road", cursive;
   font-weight: bold;
   margin: 0 0.5rem;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container {
+  display: flex;
+  flex-direction: column;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills {
+  width: 65%;
+  margin: 3rem 0;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills p {
+  z-index: 1;
+  position: relative;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills:nth-child(odd) {
+  align-self: flex-start;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills:nth-child(even) {
+  align-self: flex-end;
+  text-align: right;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills .about-content-skills-separator {
+  display: block;
+  height: 1rem;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.education > p:before {
+  content: "Education & courses";
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  color: rgba(153, 189, 166, 0.5);
+  position: absolute;
+  font-weight: normal;
+  font-size: 3rem;
+  z-index: -1;
+  top: -18px;
+  left: -20px;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.teck-skills > p:before {
+  content: "Tech skills";
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  color: rgba(153, 189, 166, 0.5);
+  position: absolute;
+  font-weight: normal;
+  font-size: 3rem;
+  z-index: -1;
+  top: -18px;
+  right: 85px;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.soft-skills > p:before {
+  content: "Soft skills";
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  color: rgba(153, 189, 166, 0.5);
+  position: absolute;
+  font-weight: normal;
+  font-size: 3rem;
+  z-index: -1;
+  top: -18px;
+  right: 255px;
+}
+.parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.hobbies > p:before {
+  content: "Hobbies";
+  font-family: "Turret Road", cursive;
+  font-weight: bold;
+  color: rgba(153, 189, 166, 0.5);
+  position: absolute;
+  font-weight: normal;
+  font-size: 3rem;
+  z-index: -1;
+  top: -18px;
+  left: 285px;
 }
 .parallax-wrapper main .parallax-group {
   overflow: hidden;
