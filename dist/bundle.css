@@ -833,9 +833,16 @@ ul, ol {
   width: 65%;
   margin: 3rem 0;
 }
+@media screen and (max-width: 576px), (max-width: 991px) {
+  .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills {
+    width: 80%;
+    margin: 2rem 0;
+  }
+}
 .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills p {
   z-index: 1;
   position: relative;
+  word-break: break-word;
 }
 .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills:nth-child(odd) {
   align-self: flex-start;
@@ -860,6 +867,13 @@ ul, ol {
   top: -18px;
   left: -20px;
 }
+@media screen and (max-width: 576px), (max-width: 992px) {
+  .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.education > p:before {
+    font-size: 2.5rem;
+    width: 100%;
+    left: 0;
+  }
+}
 .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.teck-skills > p:before {
   content: "Tech skills";
   font-family: "Turret Road", cursive;
@@ -871,6 +885,13 @@ ul, ol {
   z-index: -1;
   top: -18px;
   right: 85px;
+}
+@media screen and (max-width: 576px), (max-width: 992px) {
+  .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.teck-skills > p:before {
+    font-size: 2.5rem;
+    width: 100%;
+    right: 0;
+  }
 }
 .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.soft-skills > p:before {
   content: "Soft skills";
@@ -884,6 +905,13 @@ ul, ol {
   top: -18px;
   right: 255px;
 }
+@media screen and (max-width: 576px), (max-width: 992px) {
+  .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.soft-skills > p:before {
+    font-size: 2.5rem;
+    width: 100%;
+    left: 0;
+  }
+}
 .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.hobbies > p:before {
   content: "Hobbies";
   font-family: "Turret Road", cursive;
@@ -895,6 +923,14 @@ ul, ol {
   z-index: -1;
   top: -18px;
   left: 285px;
+}
+@media screen and (max-width: 576px), (max-width: 992px) {
+  .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.hobbies > p:before {
+    font-size: 2.5rem;
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
 }
 .parallax-wrapper main .parallax-group {
   overflow: hidden;
