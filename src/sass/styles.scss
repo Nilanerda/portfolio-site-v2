@@ -321,7 +321,7 @@ ul, ol {
                             content: 'Hobbies';
                             @include title-fonts;
                             @include skill-outer;
-                            left: 285px;
+                            right: 285px;
                             @media screen and (max-width: $xs), (max-width: $lg) {
                                 font-size: 2.5rem;
                                 width: 100%;

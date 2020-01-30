@@ -922,7 +922,7 @@ ul, ol {
   font-size: 3rem;
   z-index: -1;
   top: -18px;
-  left: 285px;
+  right: 285px;
 }
 @media screen and (max-width: 576px), (max-width: 992px) {
   .parallax-wrapper main .main-group .about-content .about-content-container .about-content-skills.hobbies > p:before {
